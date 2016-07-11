@@ -19,17 +19,17 @@ module.exports = function (grunt) {
             }
         },
         protractor: {
-            options: {
-                keepAlive: true, // If false, the grunt process stops when the test fails.
-                noColor: false// If true, protractor will not use colors in its output.
-            },
-            default: {   // Grunt requires at least one target to run so you can simply put 'all: {}' here too.
+            default: {
                 options: {
                     configFile: "src/test/e2e/config/protractor-conf.js", // Target-specific config file
-                    args: {}, // Target-specific arguments
-                    suite: "test",
-                    cucumberOpts: {
-                        tags: ['@insert', '~@test']
+                    keepAlive: true, // If false, the grunt process stops when the test fails.
+                    noColor: false,// If true, protractor will not use colors in its output.
+                    args: {
+                        suite: ["test"],
+                        cucumberOpts: {
+                            require: 'src/test/e2e/features/step_definitions/*.js',
+                            tags: ['@insert', '~@test']
+                        }
                     }
                 }
             }
