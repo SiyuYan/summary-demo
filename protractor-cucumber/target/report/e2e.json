@@ -1,0 +1,38 @@
+[
+  {
+    "id": "Login-Github",
+    "name": "Login Github",
+    "description": "As a user of github\nI want to login with my account\nSo that I use my github",
+    "line": 1,
+    "keyword": "Feature",
+    "uri": "/Users/syyan/Thoughtworks/summary-demo/protractor-cucumber/src/test/e2e/features/test.feature",
+    "elements": [
+      {
+        "name": "test insert feature",
+        "id": "Login-Github;test-insert-feature",
+        "line": 11,
+        "keyword": "Scenario",
+        "description": "",
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@insert",
+            "line": 10
+          }
+        ],
+        "steps": [
+          {
+            "name": "test feature",
+            "line": 12,
+            "keyword": "Given ",
+            "result": {
+              "duration": 773405,
+              "status": "passed"
+            },
+            "match": {}
+          }
+        ]
+      }
+    ]
+  }
+]
