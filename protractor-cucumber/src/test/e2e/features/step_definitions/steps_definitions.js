@@ -33,16 +33,7 @@ module.exports = function () {
             //});
         }
         else {
-            expect(browser.driver.getCurrentUrl()).to.eventually.not.equal('https://github.com/').and.notify(done);
+            expect(browser.driver.getCurrentUrl()).to.eventually.equal('https://github.com/').and.notify(done);
         }
-        //var id;
-        //browser.driver.getCurrentUrl().then(function (text) {
-        //    clientId=text;
-        //    console.log(id);
-        //    expect(browser.driver.getCurrentUrl()).to.eventually.not.equal('https://github.com/').and.notify(done);
-        //
-        //});
-
-     //done()
     });
 };

@@ -18,5 +18,5 @@ exports.config = {
     rootElement: 'html',//Error while waiting for protractor to sync with the page [ng:test] ng-app on html not body
     onPrepare: function () {
         global.root_path = '';
-    },
+    }
 };
