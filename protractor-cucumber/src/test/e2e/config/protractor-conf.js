@@ -13,7 +13,7 @@ exports.config = {
         require: 'features/step_definitions/*.js',
         Format: 'json'
     },
-    allScriptTimeout: 10000,
+    allScriptTimeout: 10000,//Sets the amount of time to wait for an asynchronous script to finish execution before throwing an error.
     getPageTimeout: 100000,
     rootElement: 'html',//Error while waiting for protractor to sync with the page [ng:test] ng-app on html not body
     onPrepare: function () {
