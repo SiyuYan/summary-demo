@@ -26,7 +26,7 @@
             "line": 8,
             "keyword": "Given ",
             "result": {
-              "duration": 4451044164,
+              "duration": 3992894755,
               "status": "passed"
             },
             "match": {}
@@ -36,7 +36,7 @@
             "line": 9,
             "keyword": "When ",
             "result": {
-              "duration": 1036410841,
+              "duration": 1021969615,
               "status": "passed"
             },
             "match": {}
@@ -46,9 +46,8 @@
             "line": 10,
             "keyword": "Then ",
             "result": {
-              "error_message": "AssertionError: expected 'https://github.com/session' to equal 'https://github.com/'\n\n",
-              "duration": 9141015,
-              "status": "failed"
+              "duration": 10730892,
+              "status": "passed"
             },
             "match": {}
           },
@@ -56,9 +55,8 @@
             "keyword": "After ",
             "hidden": true,
             "result": {
-              "error_message": "TypeError: Cannot read property 'toString' of undefined\n  at /Users/syyan/Thoughtworks/summary-demo/protractor-cucumber/src/test/e2e/features/support/hooks.js:13:26\n  at [object Object].promise.ControlFlow.runInFrame_ (/Users/syyan/Thoughtworks/summary-demo/protractor-cucumber/node_modules/protractor/node_modules/selenium-webdriver/lib/goog/../webdriver/promise.js:1857:20)\n  at [object Object].goog.defineClass.notify (/Users/syyan/Thoughtworks/summary-demo/protractor-cucumber/node_modules/protractor/node_modules/selenium-webdriver/lib/goog/../webdriver/promise.js:2448:25)\n  at [object Object].promise.Promise.notify_ (/Users/syyan/Thoughtworks/summary-demo/protractor-cucumber/node_modules/protractor/node_modules/selenium-webdriver/lib/goog/../webdriver/promise.js:564:12)\n  at Array.forEach (native)\n  at [object Object].promise.Promise.notifyAll_ (/Users/syyan/Thoughtworks/summary-demo/protractor-cucumber/node_modules/protractor/node_modules/selenium-webdriver/lib/goog/../webdriver/promise.js:553:15)\n  at goog.async.run.processWorkQueue (/Users/syyan/Thoughtworks/summary-demo/protractor-cucumber/node_modules/protractor/node_modules/selenium-webdriver/lib/goog/async/run.js:130:15)\n  at runMicrotasksCallback (node.js:337:7)\n  at process._tickDomainCallback (node.js:381:11)\n",
-              "duration": 297744233,
-              "status": "failed"
+              "duration": 133188,
+              "status": "passed"
             },
             "match": {}
           }

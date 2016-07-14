@@ -1,11 +1,16 @@
 var myHandlers = function () {
-    this.registerHandler('AfterStep', function (features, callback) {
-        // clean up!
-        // There is no World instance available on `this`
-        // because all scenarios are done and World instances are long gone.
-        console.log('+++++'+'\n');
+    global.attachments = [];
+
+    this.registerHandler('AfterStep', function (step, callback) {
+        if (step.getName()) {
+            console.log('Screen step:   ' + step.getName());
+            browser.takeScreenshot().then(function (png) {
+                var decodedImage = new Buffer(png, 'Base64');
+                global.attachments.push(decodedImage);
+            })
+        }
         callback();
     });
-}
+};
 
 module.exports = myHandlers;

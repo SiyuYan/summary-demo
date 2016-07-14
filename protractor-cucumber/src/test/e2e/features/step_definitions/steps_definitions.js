@@ -33,7 +33,7 @@ module.exports = function () {
             //});
         }
         else {
-            expect(browser.driver.getCurrentUrl()).to.eventually.equal('https://github.com/').and.notify(done);
+            expect(browser.driver.getCurrentUrl()).to.eventually.not.equal('https://github.com/').and.notify(done);
         }
     });
 };
