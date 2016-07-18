@@ -11,8 +11,8 @@ module.exports = function () {
     });
 
     this.When(/^login with users "([^"]*)" and "([^"]*)"$/, function (UserName, PassWord, done) {
-        browser.driver.findElement(by.id('login_field')).sendKeys(UserName);
-        browser.driver.findElement(by.id('password')).sendKeys(PassWord);
+        browser.driver.findElement(by.name('login')).sendKeys(UserName);
+        browser.driver.findElement(by.name('password')).sendKeys(PassWord);
         browser.driver.findElement(by.name('commit')).click();
         expect(browser.driver.getCurrentUrl()).to.eventually.not.equal('http').and.notify(done);
     });
