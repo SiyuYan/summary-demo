@@ -7,23 +7,24 @@ var myHooks = function () {
     //    console.log('before hook')
     //});
     this.After(function (scenario, callback) {
-        console.log('Attach ' + global.attachments.length + 'screenshots for scenario:' + scenario.getName());
+       // console.log('Attach ' + global.attachments.length + 'screenshots for scenario:' + scenario.getName());
         //if (scenario.isFailed()) {
-        //    browser.takeScreenshot().then(function (png) {
-        //        var decodedImage = new Buffer(png, 'Base64').toString('binary');
-        //        scenario.attach()(decodedImage, 'image/png');
-        //        callback();
-        //    });
-        //}
-        //else callback();
-        global.attachments.forEach(function (attachment) {
-            scenario.attach(attachment, 'image/png');
+        browser.takeScreenshot().then(function (png) {
+            var decodedImage = new Buffer(png, 'Base64').toString('binary');
+            console.log(decodedImage);
+            scenario.attach()(decodedImage, 'image/png');
+            callback();
         });
-        global.attachments = [];
-        console.log('Clear attachments ' + global.attachments.length);
-        callback();
-
-    })
+    });
+    //    //else callback();
+    //    global.attachments.forEach(function (attachment) {
+    //        scenario.attach(attachment, 'image/png');
+    //    });
+    //    global.attachments = [];
+    //    console.log('Clear attachments ' + global.attachments.length);
+    //    callback();
+    //
+    //})
 };
 
 module.exports = myHooks;

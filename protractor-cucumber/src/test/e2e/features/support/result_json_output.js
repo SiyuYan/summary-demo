@@ -1,9 +1,9 @@
-module.exports = function () {
+var JsonOutputHook= function () {
     var Cucumber = require('cucumber');
     var JsonFormatter = Cucumber.Listener.JsonFormatter();
     var fs = require('fs');
     var path = require('path');
-    var jsonOutput = './target/e2eReports/e2e.json';
+    var jsonOutput = './target/report/e2e.json';
     JsonFormatter.log = function (json) {
         fs.writeFile(jsonOutput, json, function (err) {
             if (err)throw err;
@@ -12,3 +12,4 @@ module.exports = function () {
     };
     this.registerListener(JsonFormatter);
 };
+module.exports = JsonOutputHook;

@@ -7,19 +7,19 @@ exports.config = {
         login: '../features/login.feature',
         test: '../features/test.feature'
     },
-    //capabilities: {
-    //    browserName: 'phantomjs',
+    capabilities: {
+        browserName: 'chrome'
+    },
+    //multiCapabilities: [{
+    //    shardTestFiles: false,
+    //    browserName: 'firefox'
+    //}, {
+    //    shardTestFiles: false,
+    //    browserName: 'phantomjs'
     //    'phantomjs.binary.path': require('phantomjs').path,
     //    'phantomjs.ghostdriver.cli.args': ['--loglevel=DEBUG']
-    //},
-    multiCapabilities: [{
-        shardTestFiles: false,
-        browserName: 'firefox'
-    }, {
-        shardTestFiles: false,
-        browserName: 'phantomjs'
-
-    }],
+    //
+    //}],
     cucumberOpts: {
         require: 'features/step_definitions/*.js',
         Format: 'json'

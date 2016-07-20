@@ -10,7 +10,9 @@ module.exports = function (grunt) {
         'protractor-cucumber-html-report': {
             options: {
                 dest: './target/report',
-                output: './e2e.html'
+                output: './e2e.html',
+               // testJSONResultPath: './target/report/e2e.json',
+                testJSONDirectory: ''
             },
             default: {
                 options: {
