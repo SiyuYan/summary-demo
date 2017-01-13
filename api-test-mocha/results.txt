@@ -1,0 +1,7 @@
+
+[90m    SAMPLE unit test should return home page: [0m[2K[0G[32m  ․[0m[90m SAMPLE unit test should return home page: [0m[90m13ms[0m
+[90m    Github home page could be navigated to register page: [0m[2K[0G[32m  ․[0m[90m Github home page could be navigated to register page: [0m[31m1425ms[0m
+[90m    Github home page will refuse the request if username has been taken: [0m[2K[0G[32m  ․[0m[90m Github home page will refuse the request if username has been taken: [0m[31m1222ms[0m
+
+[92m [0m[32m 3 passing[0m[90m (4s)[0m
+
