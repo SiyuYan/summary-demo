@@ -11,7 +11,6 @@ module.exports = function (grunt) {
             options: {
                 dest: './target/report',
                 output: './e2e.html',
-               // testJSONResultPath: './target/report/e2e.json',
                 testJSONDirectory: ''
             },
             default: {
@@ -35,6 +34,13 @@ module.exports = function (grunt) {
                     }
                 }
             }
+        },
+        express:{
+            front:{
+                options:{
+                    script:'server.js'
+                }
+            }
         }
 
     });
@@ -42,12 +48,13 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-run');
     grunt.loadNpmTasks('grunt-mkdir');
     grunt.loadNpmTasks('grunt-protractor-cucumber-html-report');
+    grunt.loadNpmTasks('grunt-express-server');
 
     grunt.registerTask('test', ['mkdir', 'protractor:default', 'protractor-cucumber-html-report:default']);
     grunt.registerTask('e2e', 'test', function () {
         process.env.URL = "";
         grunt.task.run([
-            'mkdir', 'protractor:default', 'protractor-cucumber-html-report:default' 
+            'mkdir', 'protractor:default', 'protractor-cucumber-html-report:default'
         ])
 
     });

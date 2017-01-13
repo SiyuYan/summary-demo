@@ -11,7 +11,6 @@ var myHooks = function () {
         //if (scenario.isFailed()) {
         browser.takeScreenshot().then(function (png) {
             var decodedImage = new Buffer(png, 'Base64').toString('binary');
-            console.log(decodedImage);
             scenario.attach()(decodedImage, 'image/png');
             callback();
         });
